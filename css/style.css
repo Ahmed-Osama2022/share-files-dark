@@ -1,0 +1,77 @@
+body {
+  /* New background Color */
+  background: rgb(92, 92, 92);
+  background: linear-gradient(120deg, rgba(92, 92, 92, 1) 24%, rgba(4, 167, 200, 1) 100%);
+
+  color: #f0f0f0 !important;
+  max-width: 480px;
+  margin: auto;
+}
+nav span {
+  color: rgba(255, 255, 255, 0.85);
+}
+/* overwrite the bootstrap ".form-control" class */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+form,
+nav {
+  backdrop-filter: blur(10px) brightness(1.1);
+}
+.file_card {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.file_card a {
+  /* color: unset !important; */
+}
+.file-size {
+  font-size: 0.75rem;
+  color: #f0f0f0 !important;
+}
+
+.file-name {
+  overflow-wrap: break-word; /* Allows long words to be broken */
+  white-space: normal; /* Text will wrap onto the next line when it exceeds the container */
+}
+/* Media queries */
+@media (width < 500px) {
+  .file-name {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1439px) {
+  body {
+    max-width: 760px;
+  }
+  nav img {
+    width: 54px;
+    height: 54px;
+  }
+  nav span {
+    font-size: 2rem;
+  }
+}
+@media (width >= 1440px) {
+  body {
+    max-width: 992px;
+  }
+  nav img {
+    width: 54px;
+    height: 54px;
+  }
+  nav span {
+    font-size: 2.3rem;
+  }
+}
+@media (width >= 776px) {
+  .qr-code-wrapper img {
+    width: 180px;
+    height: 180px;
+  }
+}
+/* Overwrite all of the colors */
+p,
+a,
+span {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
