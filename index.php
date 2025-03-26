@@ -67,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
 
   <form
     method="POST"
-    class="text-center mt-3 p-3 p-md-0"
+    class="text-center mt-3 p-3 p-md-0 shadow-lg rounded-2"
     enctype="multipart/form-data">
-    <div class="p-3 shadow-lg rounded">
+    <div class="p-3">
       <h2>Please upload your files!</h2>
       <div class="mb-3 mt-3">
         <label for="fileShared" class="form-label">Choose the files from your device</label>
