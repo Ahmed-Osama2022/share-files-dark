@@ -122,10 +122,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
 
             }
           } else {
-            echo "<p class='text-muted'>No files avaliable to share</p>";
+            echo "<p class=''>No files avaliable to share</p>";
           }
         } else {
-          echo "<p class='text-muted'>No files avaliable to share</p>";
+          echo "<p class=''>No files avaliable to share</p>";
         }
         ?>
 

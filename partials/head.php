@@ -12,5 +12,5 @@
 
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/all.min.js"></script>
-  <title>Share Files</title>
+  <title>Share Files | Dark Mode</title>
 </head>
