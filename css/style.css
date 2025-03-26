@@ -9,7 +9,6 @@ body {
   color: #f0f0f0 !important;
   max-width: 480px;
   margin: auto;
-  height: 400vh;
 }
 
 nav span,
@@ -29,10 +28,6 @@ nav {
 
 .file_card {
   background-color: rgba(255, 255, 255, 0.15);
-}
-
-.file_card a {
-  /* color: unset !important; */
 }
 
 .file-size {
