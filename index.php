@@ -132,44 +132,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
         <?php if ($files_to_share): ?>
           <p class="fs-5 mt-3">Files avaliable to share:</p>
           <?php foreach ($files_arr as $file): ?>
-            <?php
-            // Get the extension
-            $extension = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-
-            // Define allowed video extensions
-            $videoExtensions = ['mp4', 'mkv', 'avi', 'mov', 'flv', 'wmv', 'webm'];
-            ?>
-            <?php if (in_array($extension, $videoExtensions)): ?>
-              <!-- It's a video element -->
-              <div class="p-3 my-2  rounded border border-2 file_card d-flex justify-content-between align-items-center">
-                <div class="d-flex flex-column flex-nowrap gap-2 w-100">
-                  <a href="./uploads/<?= $file ?>" target="__blank" class="fs-6 m-0 text-start file-name"><?= $file ?></a>
-                  <div class="pe-3">
-                    <video src="./uploads/<?= $file ?>" autoplay muted
-                      class="img-fluid rounded-2 w-100 video_element"
-                      style="max-height: 400px; object-fit: cover;"></video>
-                  </div>
-                  <!-- Download BTN -->
-                  <div class="d-flex align-items-center ms-auto">
-                    <p class="text-muted pe-2 my-1 file-size"><?= get_file_size($file, $directory); ?></p>
-                    <a href="./uploads/<?= $file ?>" class="fs-5 " download>
-                      <i class="fa-solid fa-circle-down text-success fs-4"></i>
-                    </a>
-                  </div>
-                </div>
+            <!-- NOT Video element -->
+            <div class="p-3 my-2  rounded border border-2 file_card d-flex justify-content-between align-items-center ">
+              <a href="./uploads/<?= $file ?>" target="__blank" class="fs-6 m-0 text-start file-name"><?= $file ?></a>
+              <div class="d-flex align-items-center">
+                <p class="text-muted pe-2 my-1 file-size"><?= get_file_size($file, $directory); ?></p>
+                <a href="./uploads/<?= $file ?>" class="fs-5 " download>
+                  <i class="fa-solid fa-circle-down text-success fs-4"></i>
+                </a>
               </div>
-            <?php else: ?>
-              <!-- NOT Video element -->
-              <div class="p-3 my-2  rounded border border-2 file_card d-flex justify-content-between align-items-center ">
-                <a href="./uploads/<?= $file ?>" target="__blank" class="fs-6 m-0 text-start file-name"><?= $file ?></a>
-                <div class="d-flex align-items-center">
-                  <p class="text-muted pe-2 my-1 file-size"><?= get_file_size($file, $directory); ?></p>
-                  <a href="./uploads/<?= $file ?>" class="fs-5 " download>
-                    <i class="fa-solid fa-circle-down text-success fs-4"></i>
-                  </a>
-                </div>
-              </div>
-            <?php endif; ?>
+            </div>
           <?php endforeach; ?>
         <?php endif; ?>
 
