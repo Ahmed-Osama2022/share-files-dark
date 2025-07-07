@@ -86,6 +86,9 @@ nav {
     height: 180px;
   }
 }
+.video_element {
+  user-select: none;
+}
 
 /* Overwrite all of the colors */
 p,
